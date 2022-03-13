@@ -100,39 +100,25 @@ section .musicalstyle h3 {
 /* Gear */
 .grid-container {
   display: grid;
-  grid-template-areas:
-  "fredrikGear martenGear";
-  margin: 50px, auto;
-  gap: 35px;
-  padding: 100px 50px;
-  border: 1px solid blue;
-}
-@media screen and (max-width: 768px){
-  .grid-container {
-    grid-template-areas:
-    "fredrikGear"
-    "martenGear"
-    "dickGear"
-    "tomasGear"
-    "jensGear";
-  }
+  gap: 1rem;
+  justify-items: center;
+  align-content: center;
 }
 .fredrikGear,
 h2 {
   display: grid;
-  padding: 10px 25px;
-  word-wrap: normal;
-  border: 1px solid red;
+  padding: 1rem 2rem;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Condensed" sans-serif;
   font-weight: 400;
 }
-.fredrikimg, .img {
+.fredrikimg {
   display: flex;
   flex-direction: row;
-  justify-items: space-evenly;
+  justify-content: space-evenly;
 }
 .martenGear,
 h2 {
@@ -140,10 +126,10 @@ h2 {
   padding: 15px 15px;
   word-wrap: normal;
   width: auto;
-  border: 1px solid red;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Condensed" sans-serif;
   font-weight: 400;
 }
@@ -158,10 +144,10 @@ h2 {
   padding: 10px 25px;
   word-wrap: normal;
   width: auto;
-  border: 1px solid red;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Condensed" sans-serif;
   font-weight: 400;
 }
@@ -176,12 +162,13 @@ h2 {
   padding: 10px 25px;
   word-wrap: normal;
   width: auto;
-  border: 1px solid red;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Condensed" sans-serif;
   font-weight: 400;
+  overflow: auto;
 }
 .tomasGear .tomasimg {
   display: flex;
@@ -194,17 +181,37 @@ h2 {
   padding: 10px 25px;
   word-wrap: normal;
   width: auto;
-  border: 1px solid red;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Condensed" sans-serif;
   font-weight: 400;
 }
 .jensGear .jensimg {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+    grid-template-areas:
+      "main"
+      "nav"
+      "grid-container"
+      "fredrikGear"
+      "fredrikimg"
+      "martenGear"
+      "martinimg"
+      "dickGear"
+      "dickimg"
+      "tomasGear"
+      "tomasimg"
+      "jensGear"
+      "jensimg";
+  }
 }
 /* CSS Merch */
 /* Flexbox camisetas, posters, merch*/
